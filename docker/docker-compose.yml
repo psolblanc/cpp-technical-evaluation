@@ -1,0 +1,32 @@
+version: "3"
+
+services:
+  rtsp-server:
+    build:
+      context: "stream-server"
+      dockerfile: "Dockerfile"
+    environment:
+      - RTSP_READTIMEOUT=100s
+      - RTSP_PROTOCOLS=tcp
+      - RTSP_RTSPPORT=61250
+      - RTSP_RTPPORT=61252
+      - RTSP_RTCPPORT=61253
+      - USER_HOST=${USER}
+    ports:
+      - "61250:61250"
+      - "61252:61252"
+      - "61253:61253"
+
+  rtsp-producer:
+    image: "jrottenberg/ffmpeg:4.2-nvidia"
+    privileged: true
+    volumes:
+      - ../videos:/videos
+      - ./stream-producer/:/producers
+    environment:
+      - RTSP_PORT=61250
+      - RTP_PORT=61252
+      - RTCP_PORT=61253
+      - VIDEO_PATH=/videos
+    network_mode: "host"
+    entrypoint: ["bash", "-c","/producers/producer.sh"]
