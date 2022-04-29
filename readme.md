@@ -31,10 +31,10 @@ We are working a lot with docker compose and docker framework, as recommendation
 
 ## Pre-requisites
 
-	* Install Docker CE (follow [Installation Guide](https://docs.docker.com/engine/install/ubuntu/)).
-	* Make sure about [post installation step for Docker](https://docs.docker.com/engine/install/linux-postinstall/).
-	* Install docker-compose (follow [installation guide](https://docs.docker.com/compose/install/#install-compose-on-linux-systems)).
-  * Download video from [s3://allread-public-technical-evaluation/train-example.mp4](s3://allread-public-technical-evaluation/train-example.mp4)
+* Install Docker CE (follow [Installation Guide](https://docs.docker.com/engine/install/ubuntu/)).
+* Make sure about [post installation step for Docker](https://docs.docker.com/engine/install/linux-postinstall/).
+* Install docker-compose (follow [installation guide](https://docs.docker.com/compose/install/#install-compose-on-linux-systems)).
+* Download video from [s3://allread-public-technical-evaluation/train-example.mp4](s3://allread-public-technical-evaluation/train-example.mp4)
 
 
 ## Instructions
@@ -69,6 +69,6 @@ we can set up a meeting to explain in detail this evaluation.
 3. You application could connect easily to our emulated camera on this rstp uri: '''rtsp://localhost:61250/cam01'''
 4. Keep in mind, that there is already a second camera on rstp uri: '''rtsp://localhost:61250/cam01'''
 3. Stop docker compose
-  ```shell
-  docker-compose -f ./docker/docker-compose.yml down
-  ```
+	 ```shell
+	 docker-compose -f ./docker/docker-compose.yml down
+	 ```
