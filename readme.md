@@ -15,15 +15,15 @@ The terminal installs two standard IP cameras, 30 fps, to monitor the access poi
 
 <table style="padding:10px">
 	<tr>
-	 	<td style="text-align: center; vertical-align: middle;"><img src="./images/front-view.jpg"  alt="front-view" ></td>   
-		<td style="text-align: center; vertical-align: middle;"><img src="./images/lateral-view.png" alt="lateral-view"></td>
+	 	<td align="center"><img src="./images/front-view.jpg"  alt="front-view" ></td>   
+		<td align="center"><img src="./images/lateral-view.png" alt="lateral-view"></td>
 	</tr>
 	<tr>
-	 	<td style="text-align: center; vertical-align: middle;">Cam A: Frontal view</td>   
-		<td style="text-align: center; vertical-align: middle;">Cam B: Lateral view</td>
+	 	<td align="center"">Cam A: Frontal view</td>   
+		<td align="center">Cam B: Lateral view</td>
 	</tr>
 	<tr>
-	 	<td colspan="2" style="text-align: center; vertical-align: middle;">Figure 1</td>   
+	 	<td colspan="2" align="center">Figure 1</td>   
 	</tr>
 </table>
 
@@ -89,14 +89,14 @@ we can set up a meeting to explain in detail this evaluation.
 
 ## Test environment
 
-1. Download from s3 the video and write in ./video. [s3://allread-public-technical-evaluation/train-example.mp4](s3://allread-public-technical-evaluation/train-example.mp4)
+1. Download from s3 the video and write in ./video.
 2. Start docker compose in docker folder
-	```shell
-	docker-compose -f ./docker/docker-compose.yml up
+	```bash
+	$ docker-compose -f ./docker/docker-compose.yml up
 	```
-3. You application could connect easily to our emulated camera on this rstp uri: '''rtsp://localhost:61250/cam01'''
-4. Keep in mind, that there is already a second camera on rstp uri: '''rtsp://localhost:61250/cam01'''
+3. You application could connect easily to our emulated camera on this rstp uri: ```rtsp://localhost:61250/cam01```
+4. Keep in mind, that there is already a second camera on rstp uri: ```rtsp://localhost:61250/cam01```
 3. Stop docker compose
-	 ```shell
-	 docker-compose -f ./docker/docker-compose.yml down
+	 ```bash
+	 $ docker-compose -f ./docker/docker-compose.yml down
 	 ```
