@@ -1,5 +1,33 @@
 # A C++ Evaluation
 
+## The Real Use case
+
+A terminal wants to monitor their ins and outs from a given access point, Everytime that a vehicle passes through this point, we want to process a short video clip of the transit in order to provide in real time the relevant information such as license plate, shipping container code, etc.
+Although we have to monitor this access point 24/7, most of the time there isn't a vehicle passing by, so it will be a waste of computational resources to process each and every frame.
+
+The terminal installs two standard IP cameras, 30 fps, to monitor the access point. One with a frontal view to capture the license plates, and the other one with a  lateral view, several meters away, to see the container codes (see Fig. 1).
+
+ Some cameras brands that we have worked with previously:
+
+ * [Axis](https://www.axis.com/products/axis-p14-series)
+ * [Avigilon](https://www.avigilon.com/products/cameras-sensors/h4a)
+ * [Alhua](https://www.dahuasecurity.com/es/products/All-Products/Network-Cameras/WizSense-Series)
+
+<table style="padding:10px">
+	<tr>
+	 	<td style="text-align: center; vertical-align: middle;"><img src="./images/front-view.jpg"  alt="front-view" ></td>   
+		<td style="text-align: center; vertical-align: middle;"><img src="./images/lateral-view.png" alt="lateral-view"></td>
+	</tr>
+	<tr>
+	 	<td style="text-align: center; vertical-align: middle;">Cam A: Frontal view</td>   
+		<td style="text-align: center; vertical-align: middle;">Cam B: Lateral view</td>
+	</tr>
+	<tr>
+	 	<td colspan="2" style="text-align: center; vertical-align: middle;">Figure 1</td>   
+	</tr>
+</table>
+
+
 ## Simple Motion Detection Data pipeline
 
 To begin this evaluation, a simplified typical use case will be described.
