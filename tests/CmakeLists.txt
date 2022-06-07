@@ -1,0 +1,13 @@
+set(TEST_NAME ${PROJECT_NAME}Tests)
+
+# Create and configure executables
+add_executable(${TEST_NAME})
+
+target_sources(${TEST_NAME} PRIVATE test_main.cpp test_initial.cpp)
+
+set_target_properties(${TEST_NAME} PROPERTIES CXX_STANDARD_REQUIRED YES)
+target_compile_features(${TEST_NAME} PRIVATE cxx_std_17)
+
+# Link to libraries
+target_link_libraries(${TEST_NAME} ${PROJECT_lib} gtest gtest_main)
+
