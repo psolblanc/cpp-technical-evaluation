@@ -19,6 +19,9 @@ add_library(${PROJECT_lib})
 target_sources(${PROJECT_lib} PRIVATE ${ALL_FILES})
 target_include_directories(${PROJECT_lib} PUBLIC ${INCLUDE_PATH})
 
+# Manually added directory for logger
+include_directories("../vendor/spdlog/include")
+
 set_target_properties(${PROJECT} PROPERTIES CXX_STANDARD_REQUIRED YES)
 set_target_properties(${PROJECT_lib} PROPERTIES CXX_STANDARD_REQUIRED YES)
 
